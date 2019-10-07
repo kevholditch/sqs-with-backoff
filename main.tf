@@ -1,5 +1,5 @@
 resource "aws_sqs_queue" "sqs" {
-  name                       = "bad_co-${var.queue_name}"
+  name                       = "awesome_co-${var.queue_name}"
   visibility_timeout_seconds = var.visibility_timeout
   delay_seconds              = 0
   max_message_size           = 262144
@@ -9,7 +9,7 @@ resource "aws_sqs_queue" "sqs" {
 }
 
 resource "aws_sqs_queue" "sqs_dead_letter" {
-  name                       = "bad_co-${var.queue_name}-dead-letter"
+  name                       = "awsome_co-${var.queue_name}-dead-letter"
   delay_seconds              = 0
   max_message_size           = 262144
   message_retention_seconds  = 1209600 # 14 days.
